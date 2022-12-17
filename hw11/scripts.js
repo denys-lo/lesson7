@@ -1,4 +1,4 @@
-const customerArray =[];
+const customerArray = [];
 while(true) {
     const getElement = prompt('Enter number for array (If you want to stop, click on cancel):');
 
@@ -20,10 +20,10 @@ if (customerArray.length === 0) {
 } else {
     // User's array
     alert(`Your array: ${customerArray}`);
-// Sort array
+    // Sort array
     customerArray.sort((a, b) => a - b);
     alert(`Sorted array: ${customerArray}`);
-// Delete elements 2 through 4 inclusive
+    // Delete elements 2 through 4 inclusive
     if (customerArray.length < 4) {
         alert(`Elements in the array are less than 41`);
     } else {
