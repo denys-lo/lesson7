@@ -7,11 +7,11 @@ while(true) {
     }
 
     if (getElement.trim() === '') {
-        alert("You entered not a number, please try again!")
+        alert("You entered not a number, please try again!");
     } else if (!isNaN(+getElement)) {
         customerArray.push(+getElement);
     } else {
-        alert("You entered not a number, please try again!")
+        alert("You entered not a number, please try again!");
     }
 }
 
@@ -25,7 +25,7 @@ if (customerArray.length === 0) {
     alert(`Sorted array: ${customerArray}`);
 // Delete elements 2 through 4 inclusive
     if (customerArray.length < 4) {
-        alert(`Elements in the array are less than 41`)
+        alert(`Elements in the array are less than 41`);
     } else {
         const deletedElements = customerArray.splice(1,3);
         alert(`Deleted elements: ${deletedElements}
