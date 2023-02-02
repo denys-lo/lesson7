@@ -1,12 +1,12 @@
-const arr = [16,-37,54,-4,72,-56,47,4, -16,25,-37,46,4,-51,27,-63,4,-54,76,-4,12,-35,4,47];
-const arrForIndexes = arr.slice();
-arr.sort((a, b) => a - b);
+const arr = [16,-37,54,-4,72,-56,47,4,-16,25,-37,46,4,-51,27,-63,4,-54,76,-4,12,-35,4,47];
+const copyArr = arr.slice().sort((a, b) => a - b);
+
 // 2. Знайти мінімальний елемент масиву та його порядковий номер.
-console.log(`2. Знайти мінімальний елемент масиву та його порядковий номер: ${arr[0]}
-index: ${arrForIndexes.indexOf(arr[0])}`);
+console.log(`2. Знайти мінімальний елемент масиву та його порядковий номер: ${copyArr[0]}
+index: ${arr.indexOf(copyArr[0])}`);
 // 3. Знайти максимальний елемент масиву та його порядковий номер.
-console.log(`3. Знайти максимальний елемент масиву та його порядковий номер: ${arr[arr.length - 1]}
-index: ${arrForIndexes.indexOf(arr[arr.length - 1])}`);
+console.log(`3. Знайти максимальний елемент масиву та його порядковий номер: ${copyArr[copyArr.length - 1]}
+index: ${arr.indexOf(copyArr[copyArr.length - 1])}`);
 // 4. Визначити кількість негативних елементів.
 let negative = 0;
 for (let i of arr) {
@@ -60,9 +60,9 @@ for (let i of arr) {
 }
 console.log(`9. Знайти добуток позитивних елементів: ${sumMultiOfPositive}`);
 // 10. Знайти найбільший серед елементів масиву, остальні обнулити.
-for (let i of arrForIndexes) {
-    if (arrForIndexes.indexOf(i) !== arrForIndexes.indexOf(arr[arr.length - 1])) {
-        arrForIndexes[arrForIndexes.indexOf(i)] = 0;
+for (let i of arr) {
+    if (arr.indexOf(i) !== arr.indexOf(copyArr[copyArr.length - 1])) {
+        arr[arr.indexOf(i)] = 0;
     }
 }
-console.log(`10. Знайти найбільший серед елементів масиву, остальні обнулити: ${arrForIndexes}`);
+console.log(`10. Знайти найбільший серед елементів масиву, остальні обнулити: ${arr}`);
